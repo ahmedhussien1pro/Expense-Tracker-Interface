@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BudgetWise — Expense Tracker</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body class="light">
+  <div id="splash" class="splash" aria-live="polite" aria-busy="true">
+    <div class="spinner" aria-hidden="true"></div>
+  </div>
+
+  <div class="app">
+    <header class="navbar">
+      <div class="brand">
+        <i class="fa-solid fa-wallet logo-icon"></i>
+        <div class="brand-text">
+          <h1>BudgetWise</h1>
+          <div class="muted small">Track — Analyze — Save</div>
+        </div>
+      </div>
+
+      <button id="hamburger" class="hamburger" aria-label="menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav id="navLinks" class="nav-links">
+        <a href="#" data-page="usage" class="nav-link active"><i class="fa-solid fa-hands-helping"></i><span>Usage</span></a>
+        <a href="#" data-page="entry" class="nav-link"><i class="fa-solid fa-list"></i><span>Expenses</span></a>
+        <a href="#" data-page="dashboard" class="nav-link"><i class="fa-solid fa-chart-pie"></i><span>Dashboard</span></a>
+        <a href="#" data-page="categories" class="nav-link"><i class="fa-solid fa-tags"></i><span>Categories</span></a>
+        <a href="#" data-page="about" class="nav-link"><i class="fa-solid fa-circle-info"></i><span>About</span></a>
+      </nav>
+
+      <div id="navOverlay" class="nav-overlay" tabindex="-1"></div>
+
+      <div class="controls">
+        <button id="themeToggle" class="theme-btn" title="Toggle theme" aria-label="toggle-theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="mainContent" class="grid"></main>
+
+    <button id="fabAdd" class="fab" title="Add expense"><i class="fa-solid fa-plus"></i></button>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
